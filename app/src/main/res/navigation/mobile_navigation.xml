@@ -18,8 +18,21 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.myapplication.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_tft"
+        android:name="com.example.myapplication.ui.thingforthing.TftFragment"
+        android:label="@string/title_tft"
+        tools:layout="@layout/fragment_tft" />
+
+    <fragment
+        android:id="@+id/navigation_localcity"
+        android:name="com.example.myapplication.ui.localcity.localcityFragment"
+        android:label="@string/title_localcity"
+        tools:layout="@layout/fragment_localcity" />
+
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="com.example.myapplication.ui.mine.MineFragment"
+        android:label="我的"
+        tools:layout="@layout/fragment_mine" />
+
 </navigation>

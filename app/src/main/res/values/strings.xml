@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">分类</string>
+    <string name="title_tft">物物租</string>
+    <string name="title_localcity">同城</string>
+    <string name="title_mine">我的</string>
 </resources>
