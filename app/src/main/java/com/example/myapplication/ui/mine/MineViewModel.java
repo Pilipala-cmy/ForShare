@@ -11,6 +11,7 @@ public class MineViewModel extends ViewModel {
     public MineViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is Mine fragment");
+
     }
 
     public LiveData<String> getText() {

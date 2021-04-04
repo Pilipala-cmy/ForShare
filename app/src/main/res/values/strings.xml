@@ -5,4 +5,6 @@
     <string name="title_tft">物物租</string>
     <string name="title_localcity">同城</string>
     <string name="title_mine">我的</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
