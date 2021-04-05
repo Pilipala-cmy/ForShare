@@ -8,18 +8,14 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="181dp"
+        android:layout_height="234dp"
         android:theme="@style/Theme.MyApplication.AppBarOverlay">
 
-        <TextView
-            android:id="@+id/title"
+        <com.youth.banner.Banner
+            android:id="@+id/homeBanner"
             android:layout_width="match_parent"
-            android:layout_height="132dp"
-            android:gravity="center"
-
-
-            android:text="@string/app_name"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+            android:layout_height="183dp"
+            tools:ignore="MissingConstraints"></com.youth.banner.Banner>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
@@ -32,6 +28,8 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="552dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.viewpager.widget.ViewPager>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
