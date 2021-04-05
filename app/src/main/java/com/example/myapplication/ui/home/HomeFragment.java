@@ -1,12 +1,14 @@
 package com.example.myapplication.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -40,8 +42,29 @@ public class HomeFragment extends Fragment {
         TabLayout tabs = root.findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
+        Intent toSearchPage = new Intent(getActivity(),HomeSearchActivity.class);
         homeSearch = root.findViewById(R.id.home_search);
-        homeSearch.setIconified(true);
+//        homeSearch.setIconified(true);
+        homeSearch.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(toSearchPage);
+            }
+        });
+        homeSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Toast.makeText(getActivity(),query ,Toast.LENGTH_LONG).show();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                return false;
+            }
+        });
+
 
         banner = root.findViewById(R.id.homeBanner);
         ArrayList<Integer> imgs = new ArrayList<>();
@@ -61,6 +84,9 @@ public class HomeFragment extends Fragment {
         banner.setBannerAnimation(Transformer.Accordion);
         banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
         banner.start();
+
+
+
 //        homeViewModel =
 //                new ViewModelProvider(this).get(HomeViewModel.class);
 //        View root = inflater.inflate(R.layout.fragment_home, container, false);
