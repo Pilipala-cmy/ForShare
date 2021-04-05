@@ -5,6 +5,10 @@
     <string name="title_tft">物物租</string>
     <string name="title_localcity">同城</string>
     <string name="title_mine">我的</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="home_tab_text_1">首页</string>
+    <string name="home_tab_text_2">电子产品</string>
+    <string name="home_tab_text_3">交通工具</string>
+    <string name="home_tab_text_4">家具家居</string>
+    <string name="home_tab_text_5">服装鞋帽</string>
+    <string name="home_tab_text_6">首饰珠宝</string>
 </resources>

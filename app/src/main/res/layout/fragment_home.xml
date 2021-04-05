@@ -7,9 +7,51 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="234dp"
-        android:theme="@style/Theme.MyApplication.AppBarOverlay">
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+        android:theme="@style/Theme.MyApplication.AppBarOverlay"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:id="@+id/home_search"
+                android:layout_width="322dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_searchview"
+                android:goIcon="@drawable/abc_vector_test"
+                android:searchIcon="@android:drawable/ic_menu_search">
+
+            </SearchView>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30px"
+                android:layout_weight="1"
+                android:text="福州市"
+                android:textAlignment="center"
+                android:textColor="#434343"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#60FFFFFF"
+            app:tabIconTint="@color/material_on_background_emphasis_high_type"
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#0E0E0E"
+            app:tabTextColor="#864A4A4A" />
 
         <com.youth.banner.Banner
             android:id="@+id/homeBanner"
@@ -17,11 +59,6 @@
             android:layout_height="183dp"
             tools:ignore="MissingConstraints"></com.youth.banner.Banner>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -25,6 +26,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private Banner banner;
+    private SearchView homeSearch;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -37,6 +39,9 @@ public class HomeFragment extends Fragment {
 
         TabLayout tabs = root.findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+
+        homeSearch = root.findViewById(R.id.home_search);
+        homeSearch.setIconified(true);
 
         banner = root.findViewById(R.id.homeBanner);
         ArrayList<Integer> imgs = new ArrayList<>();
